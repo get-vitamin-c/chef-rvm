@@ -20,4 +20,4 @@ export PATH="/bin:<%= node['rvm']['root_path'] %>:$PATH"
   unset MAGLEV_HOME
 fi
 
-exec <%= node['rvm']['vagrant']['system_chef_solo'] %> "$@"
+rvm-exec system <%= node['rvm']['vagrant']['system_chef_solo'] %> "$@"
